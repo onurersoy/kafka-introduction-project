@@ -15,13 +15,13 @@ public class ProducerDemo {
 
     public static void main(String[] args) {
         //System.out.println("Hello world!");
-        log.info("Hello world!");
+        log.info("I am a Kafka Producer");
 
         /*
         Kafka Producer: Java API - Basics
-            1. Writing a basic producer to send data to Kafka
-            2. View basic configuration parameters
-            3.Confirm you receive the data in a Kafka Console Consumer
+            i. Writing a basic producer to send data to Kafka
+            ii. View basic configuration parameters
+            iii.Confirm you receive the data in a Kafka Console Consumer
         */
 
         //1. Create Producer Properties:
