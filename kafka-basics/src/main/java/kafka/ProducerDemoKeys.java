@@ -7,17 +7,16 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemoWithCallback {
+public class ProducerDemoKeys {
 
-    private static final Logger log = LoggerFactory.getLogger(ProducerDemoWithCallback.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(ProducerDemoKeys.class.getSimpleName());
 
     public static void main(String[] args) {
         log.info("I am a Kafka Producer");
 
         /*
-        Kafka Java Programming 101:
-            i. Java Producer Callbacks -> to get some meta data information when we send data
-            ii. Sticky Partitioner Behaviour
+        Java Programming 101:
+            i. Java Producer With Keys
         */
 
         //Create Producer Properties:
@@ -32,9 +31,14 @@ public class ProducerDemoWithCallback {
         //2. To send multiple data fast, let's create a for loop:
         for (int i = 0; i < 10; i++) {
 
+            String topic = "demo_java";
+            String value = "Hello World " + i;
+            String key = "id " + i;
+
+
             //Create a Producer record:
             ProducerRecord<String, String> producerRecord =
-                    new ProducerRecord<>("demo_java", "hello world " + i);
+                    new ProducerRecord<>(topic, key, value);
 
             //Send data - asynchronous type of operation:
             //1. Java Producer Callbacks:
@@ -45,8 +49,9 @@ public class ProducerDemoWithCallback {
 
                     //If the record was successfully sent:
                     if (e == null) {
-                        log.info("Received new metadata./ \n" +
+                        log.info("Received new metadata. \n" +
                                 "Topic: " + metadata.topic() + "\n" +
+                                "Key: " + producerRecord.key() + "\n" +
                                 "Partition: " + metadata.partition() + "\n" +
                                 "Offset: " + metadata.offset() + "\n" +
                                 "Timestamp: " + metadata.timestamp());
@@ -59,13 +64,6 @@ public class ProducerDemoWithCallback {
                     }
                 }
             });
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
         }
         //Flush data - synchronous type of operation
         producer.flush();
