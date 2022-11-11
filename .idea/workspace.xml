@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="560295b1-0d7a-475a-bcc4-9ec8811e6d8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/kafka/ProducerDemoKeys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/kafka/ProducerDemoWithCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/kafka/ProducerDemoWithCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/kafka/ProducerDemoKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/kafka/ProducerDemoKeys.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,12 @@
       <workItem from="1663745019314" duration="598000" />
       <workItem from="1663918180729" duration="522000" />
       <workItem from="1664738629451" duration="3095000" />
-      <workItem from="1666592369352" duration="6490000" />
+      <workItem from="1666592369352" duration="7942000" />
+      <workItem from="1668063948297" duration="540000" />
+      <workItem from="1668080944242" duration="421000" />
+      <workItem from="1668081555752" duration="293000" />
+      <workItem from="1668082050203" duration="598000" />
+      <workItem from="1668151416721" duration="381000" />
     </task>
     <servers />
   </component>
